@@ -1,0 +1,24 @@
+.mainCard{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:50px;
+  margin: 30px 40px;
+  }
+
+.infoCard {
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 5px 8px 8px #888888;
+}
+
+.infoCard img {
+  width: 300px;
+  height: 150px;
+}
+
+.infoCard h2 {
+  padding-top: 20px;
+}
+.infoCard p span{
+  font-weight: 700;
+}
