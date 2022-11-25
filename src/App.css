@@ -22,3 +22,12 @@
 .infoCard p span{
   font-weight: 700;
 }
+.search{
+  padding: 10px;
+  margin-left: 100px;
+  margin-top: 20px;
+  font-size: 1rem;
+  border:0.5px solid #888888;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #888888;
+}
