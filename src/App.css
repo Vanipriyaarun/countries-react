@@ -1,9 +1,34 @@
-.mainCard{
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 2px 2px #888888;
+}
+.navBar h2 {
+  margin-left: 70px;
+}
+.ModeBtn {
+  margin-right: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 3px;
+  border: none;
+  background-color: hsl(0, 0%, 98%);
+}
+.darkMode-Btn {
+  margin-right: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 3px;
+  border: none;
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+.mainCard {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap:50px;
+  gap: 50px;
   margin: 30px 40px;
-  }
+}
 
 .infoCard {
   padding: 20px 10px;
@@ -19,15 +44,154 @@
 .infoCard h2 {
   padding-top: 20px;
 }
-.infoCard p span{
+.infoCard p span {
   font-weight: 700;
 }
-.search{
+.search {
   padding: 10px;
   margin-left: 100px;
   margin-top: 20px;
   font-size: 1rem;
-  border:0.5px solid #888888;
+  border: 0.5px solid #888888;
   border-radius: 10px;
   box-shadow: 5px 5px 5px #888888;
+}
+.darkModeSearch {
+  padding: 10px;
+  margin-left: 100px;
+  margin-top: 20px;
+  font-size: 1rem;
+  border: 0.5px solid #888888;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #888888;
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+.search-container {
+  display: flex;
+  justify-content: space-between;
+}
+.darkModeMoreDetails {
+  color: white;
+}
+.moreDetails {
+  color: black;
+}
+.SelectMenu {
+  padding: 10px;
+  margin-top: 20px;
+  margin-right: 70px;
+}
+.darkModeSelectMenu {
+  padding: 10px;
+  margin-top: 20px;
+  margin-right: 70px;
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+.country-detail-page {
+  margin-bottom: 100px;
+  border: #888888 1px solid;
+}
+.country-detail-card {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.back-btn {
+  margin-left: 70px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  border: 0.5px solid #888888;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888888;
+  padding: 3px 10px;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+}
+.darkModeBack-btn {
+  margin-left: 70px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  border: 0.5px solid #888888;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888888;
+  padding: 3px 10px;
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+.country-detail {
+  display: grid;
+  /* grid-template-columns: repeat(3,1fr); */
+  grid-template-areas:
+    "img baseDetail subDetail"
+    "img border border";
+  margin: 70px 50px;
+  padding: 50px;
+  border: 1px solid #888888;
+  box-shadow: 5px 5px 5px #888888;
+  padding-bottom: 120px;
+}
+.country-detail img {
+  width: 400px;
+  height: 250px;
+  grid-area: img;
+}
+.baseDetail {
+  grid-area: baseDetail;
+}
+.baseDetail h2 {
+  margin-left: 40px;
+}
+.baseDetail ul li {
+  list-style: none;
+}
+.subDetail {
+  grid-area: subDetail;
+  margin-top: 50px;
+}
+.subDetail ul li {
+  list-style: none;
+}
+.border {
+  grid-area: border;
+  /* text-align:center; */
+}
+.border strong {
+  margin-left: 40px;
+}
+.border-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 3px 13px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 0.5px solid #888888;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #888888;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+}
+.darkModeBorder-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 3px 13px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 0.5px solid #888888;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #888888;
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+.lightMode {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+}
+.darkMode {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
 }

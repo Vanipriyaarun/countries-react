@@ -1,24 +1,40 @@
-import React,{ useState } from "react";
-import "./App.css";
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Homepage";
+import Countries from "./countriesAll.json";
+import CountryDetails from "./CountryDetails";
+import BorderCountry from "./BorderCountry";
 
-function App(props) {
-  const [query, setQuery]=useState("");
+function App() {
+  const [theme, setTheme] = useState("lightMode");
+  function toggleTheme() {
+    setTheme(theme === "lightMode" ? "darkMode" : "lightMode");
+  }
   return (
-    <div>
-      <input type="text" placeholder="Search for a country..." className="search" onChange={(e)=> setQuery(e.target.value)}/>
-      <div className="mainCard">
-        {props.allCountry.filter((country)=>country.name.toLowerCase().includes(query) || country.capital.toLowerCase().includes(query))
-        .map((country, index) => (
-          <div key={index} className="infoCard">
-            <img src={country.flag} className="card-img-top" alt="" />
-            <h2>{country.name}</h2>
-            <p><span>Population:</span> {country.population}</p>
-            <p><span>Region:</span> {country.region}</p>
-            <p><span>Capital</span> {country.capital}</p>
-          </div>
-        ))}
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                allCountry={Countries}
+                toggleTheme={toggleTheme}
+                theme={theme}
+              />
+            }
+          />
+          <Route
+            path="/:countryName"
+            element={<CountryDetails toggleTheme={toggleTheme} theme={theme} />}
+          />
+          <Route
+            path="/:countryName/:countryName"
+            element={<BorderCountry theme={theme} toggleTheme={toggleTheme} />}
+          />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
